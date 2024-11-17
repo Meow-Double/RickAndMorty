@@ -1,11 +1,38 @@
 .container {
-  position: relative;
-  width: 600px;
-  height: 220px;
+  max-width: 300px;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   overflow: hidden;
   background: rgb(60, 62, 68);
   border-radius: 0.5rem;
-  margin: 0.75rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+
+}
+
+
+.info_container {
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.status {
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.625rem;
+}
+.alive {
+  background-color: rgb(13, 241, 101);
+}
+
+.dead {
+  background-color: rgb(199, 8, 8);
+}
+.unknown {
+  background-color: rgb(231, 231, 231);
 }

@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { Header } from '@/src/components/layout';
 import '../styles/globals.css';
 import '../styles/typography.css';
+import { TRPCProvider } from '@/src/utils/hooks';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,8 +20,10 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
+        <TRPCProvider>
+          <Header />
+          <main className="container">{children}</main>
+        </TRPCProvider>
       </body>
     </html>
   );
